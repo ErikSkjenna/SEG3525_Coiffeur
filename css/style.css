@@ -1,0 +1,386 @@
+:root {
+  --rose: #d96c8c;
+  --rose-dark: #9c2f55;
+  --rose-light: #fff0f4;
+  --beige: #f8efe6;
+  --dark: #222222;
+  --muted: #6c757d;
+  --hair-dark: #2b1a12;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fffaf7;
+  color: var(--dark);
+  transition: opacity 0.35s ease;
+}
+
+.navbar-brand {
+  color: var(--rose);
+}
+
+.navbar-brand:hover {
+  color: var(--rose-dark);
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--rose);
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--rose-light), var(--beige));
+  padding-top: 90px;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.btn-main {
+  background-color: var(--rose);
+  color: white;
+  border: none;
+}
+
+.btn-main:hover {
+  background-color: var(--rose-dark);
+  color: white;
+}
+
+.btn-version {
+  background: linear-gradient(135deg, #ffffff, var(--rose-light));
+  color: var(--rose-dark);
+  border: 2px solid var(--rose);
+  font-weight: 700;
+}
+
+.btn-version:hover {
+  background: var(--rose);
+  color: white;
+  border-color: var(--rose);
+  transform: translateY(-2px);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-label {
+  color: var(--rose);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.service-card,
+.stylist-card,
+.booking-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover,
+.stylist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon,
+.stylist-icon {
+  font-size: 2.4rem;
+  color: var(--rose);
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--rose);
+}
+
+.selected-box {
+  border: 3px solid var(--rose);
+}
+
+.summary-box {
+  background-color: var(--rose-light);
+  border-radius: 18px;
+  padding: 20px;
+  border-left: 6px solid var(--rose);
+}
+
+.confirmation {
+  display: none;
+}
+
+.confirmation.show {
+  display: block;
+}
+
+.mini-calendar {
+  background: #ffffff;
+  border: 2px solid #f3b4c6;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: inset 0 0 18px rgba(217, 108, 140, 0.08);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.calendar-header h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--rose-dark);
+}
+
+.calendar-nav {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--rose-light);
+  color: var(--rose-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-nav:hover {
+  background-color: var(--rose);
+  color: white;
+}
+
+.calendar-nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.calendar-weekdays,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-weekdays span {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.calendar-day {
+  border: none;
+  border-radius: 12px;
+  height: 42px;
+  background-color: #fff7fa;
+  color: var(--dark);
+  font-weight: 700;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.calendar-day:hover {
+  transform: translateY(-2px);
+  background-color: var(--rose-light);
+  color: var(--rose-dark);
+}
+
+.calendar-day.selected {
+  background-color: var(--rose);
+  color: white;
+  box-shadow: 0 8px 16px rgba(217, 108, 140, 0.35);
+}
+
+.calendar-day.unavailable {
+  background-color: #eeeeee;
+  color: #aaaaaa;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  pointer-events: none;
+}
+
+.price-hair-reveal {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  margin: 12px 0 24px;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 3px solid #f3b4c6;
+  background: linear-gradient(135deg, #ffffff, #ffe9f0);
+  box-shadow: inset 0 0 25px rgba(217, 108, 140, 0.18);
+}
+
+.final-price-behind {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.final-price-behind span {
+  font-size: 3.7rem;
+  font-weight: 900;
+  color: var(--rose-dark);
+  opacity: 0.55;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.price-hair-reveal.revealed .final-price-behind span {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.hair-field {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hair-strand {
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  border-radius: 999px;
+  background: var(--hair-dark);
+  transform-origin: top center;
+  opacity: 0.96;
+  animation-name: flowingHair;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.price-hair-reveal.shaving .hair-strand {
+  animation-name: shaveAway;
+  animation-duration: 1.25s !important;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.razor {
+  position: absolute;
+  top: 48px;
+  left: -80px;
+  z-index: 5;
+  width: 70px;
+  height: 45px;
+  border-radius: 14px;
+  background: var(--rose);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.price-hair-reveal.shaving .razor {
+  animation: razorSweep 1.25s ease-in-out forwards;
+}
+
+@keyframes flowingHair {
+  0% {
+    transform: rotate(-4deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(4deg) translateY(4px);
+  }
+
+  100% {
+    transform: rotate(-4deg) translateY(0);
+  }
+}
+
+@keyframes razorSweep {
+  0% {
+    left: -90px;
+    transform: rotate(-8deg);
+  }
+
+  45% {
+    left: 45%;
+    transform: rotate(5deg);
+  }
+
+  100% {
+    left: 110%;
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes shaveAway {
+  0% {
+    opacity: 0.95;
+    transform: translateY(0) rotate(0deg) scaleY(1);
+  }
+
+  45% {
+    opacity: 0.95;
+    transform: translateY(8px) rotate(8deg) scaleY(0.9);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(120px) rotate(35deg) scaleY(0.05);
+  }
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .final-price-behind span {
+    font-size: 3rem;
+  }
+
+  .price-hair-reveal {
+    height: 130px;
+  }
+}

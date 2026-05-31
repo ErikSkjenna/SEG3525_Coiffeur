@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Studio Élégance | Salon de coiffure</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#accueil">
+        <i class="bi bi-scissors"></i> Studio Élégance
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#coiffeuses">Coiffeuses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reservation">Réservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="barber.html">Version barbier</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="accueil" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge rounded-pill text-bg-light mb-3">
+            Salon de coiffure sur rendez-vous
+          </span>
+
+          <h1 class="display-4 fw-bold mb-3">
+            Réservez votre coupe en quelques clics.
+          </h1>
+
+          <p class="lead mb-4">
+            Studio Élégance combine un design moderne, des prix clairs et une réservation simple.
+            Le prototype répond aux besoins de Lucy, qui veut réserver rapidement, et de Marc,
+            qui veut comparer les services avant de choisir.
+          </p>
+
+          <a href="#reservation" class="btn btn-main btn-lg me-2">Prendre rendez-vous</a>
+          <a href="#services" class="btn btn-outline-dark btn-lg me-2">Voir les services</a>
+          <a href="barber.html" class="btn btn-version btn-lg">
+            <i class="bi bi-arrow-repeat"></i> Version barbier
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-card">
+            <h2 class="h4 fw-bold mb-3">Scénario principal</h2>
+            <p><strong>Cliente :</strong> Lucy</p>
+            <p><strong>Service :</strong> Coupe courte</p>
+            <p><strong>Coiffeuse :</strong> Jessica</p>
+            <p><strong>Date :</strong> Mercredi 27 mai</p>
+            <p><strong>Heure :</strong> 14h</p>
+            <hr>
+            <p class="text-muted mb-0">
+              Le design final combine la simplicité de réservation de Lucy avec la clarté
+              des informations recherchée par Marc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="services" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Services et prix</span>
+        <h2 class="fw-bold">Comparez les services avant de réserver</h2>
+        <p class="text-muted">
+          Cette section répond au besoin de Marc : comprendre les prix, les durées et les options.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card" data-service="Coupe courte" data-price="35" data-duration="30 minutes">
+            <i class="bi bi-scissors service-icon"></i>
+            <h3 class="h5 fw-bold">Coupe courte</h3>
+            <p>Coupe moderne, rapide et propre pour cheveux courts.</p>
+            <p class="text-muted">Durée : 30 minutes</p>
+            <p class="price">35 $</p>
+            <button class="btn btn-main w-100 choose-service">Choisir</button>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card" data-service="Coupe longue" data-price="50" data-duration="45 minutes">
+            <i class="bi bi-brush service-icon"></i>
+            <h3 class="h5 fw-bold">Coupe longue</h3>
+            <p>Coupe complète avec finition soignée pour cheveux longs.</p>
+            <p class="text-muted">Durée : 45 minutes</p>
+            <p class="price">50 $</p>
+            <button class="btn btn-main w-100 choose-service">Choisir</button>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card" data-service="Coloration" data-price="80" data-duration="90 minutes">
+            <i class="bi bi-palette service-icon"></i>
+            <h3 class="h5 fw-bold">Coloration</h3>
+            <p>Coloration personnalisée selon votre style et vos cheveux.</p>
+            <p class="text-muted">Durée : 90 minutes</p>
+            <p class="price">80 $</p>
+            <button class="btn btn-main w-100 choose-service">Choisir</button>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card" data-service="Brushing" data-price="30" data-duration="25 minutes">
+            <i class="bi bi-stars service-icon"></i>
+            <h3 class="h5 fw-bold">Brushing</h3>
+            <p>Finition élégante pour un événement ou une sortie.</p>
+            <p class="text-muted">Durée : 25 minutes</p>
+            <p class="price">30 $</p>
+            <button class="btn btn-main w-100 choose-service">Choisir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coiffeuses" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Notre équipe</span>
+        <h2 class="fw-bold">Choisissez votre coiffeuse</h2>
+        <p class="text-muted">Cette section répond au besoin de Lucy : choisir directement Jessica.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="stylist-card" data-stylist="Jessica">
+            <i class="bi bi-person-heart stylist-icon"></i>
+            <h3 class="h5 fw-bold">Jessica</h3>
+            <p>Spécialiste des coupes courtes et modernes.</p>
+            <button class="btn btn-main w-100 choose-stylist">Choisir Jessica</button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="stylist-card" data-stylist="Amélie">
+            <i class="bi bi-person stylist-icon"></i>
+            <h3 class="h5 fw-bold">Amélie</h3>
+            <p>Experte en coupes longues et soins capillaires.</p>
+            <button class="btn btn-main w-100 choose-stylist">Choisir Amélie</button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="stylist-card" data-stylist="Sarah">
+            <i class="bi bi-person stylist-icon"></i>
+            <h3 class="h5 fw-bold">Sarah</h3>
+            <p>Spécialiste en coloration et transformations.</p>
+            <button class="btn btn-main w-100 choose-stylist">Choisir Sarah</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservation" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Réservation interactive</span>
+        <h2 class="fw-bold">Prenez votre rendez-vous</h2>
+        <p class="text-muted">Le formulaire combine la rapidité de Lucy et les détails utiles pour Marc.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="booking-card">
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label for="clientName" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="clientName" placeholder="Entrez votre nom" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="clientEmail" class="form-label">Courriel</label>
+                <input type="email" class="form-control" id="clientEmail" placeholder="exemple@email.com" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="serviceSelect" class="form-label">Service</label>
+                <select class="form-select" id="serviceSelect" required>
+                  <option value="">Choisir un service</option>
+                  <option value="Coupe courte" data-price="35" data-duration="30 minutes">Coupe courte - 35 $</option>
+                  <option value="Coupe longue" data-price="50" data-duration="45 minutes">Coupe longue - 50 $</option>
+                  <option value="Coloration" data-price="80" data-duration="90 minutes">Coloration - 80 $</option>
+                  <option value="Brushing" data-price="30" data-duration="25 minutes">Brushing - 30 $</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="stylistSelect" class="form-label">Coiffeuse</label>
+                <select class="form-select" id="stylistSelect" required>
+                  <option value="">Choisir une coiffeuse</option>
+                  <option value="Jessica">Jessica</option>
+                  <option value="Amélie">Amélie</option>
+                  <option value="Sarah">Sarah</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Date</label>
+                <input type="hidden" id="dateSelect" required>
+
+                <div class="mini-calendar">
+                  <div class="calendar-header">
+                    <button type="button" class="calendar-nav" id="prevMonth">
+                      <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <h4 id="calendarMonthLabel">Mois</h4>
+                    <button type="button" class="calendar-nav" id="nextMonth">
+                      <i class="bi bi-chevron-right"></i>
+                    </button>
+                  </div>
+
+                  <div class="calendar-weekdays">
+                    <span>Dim</span><span>Lun</span><span>Mar</span><span>Mer</span>
+                    <span>Jeu</span><span>Ven</span><span>Sam</span>
+                  </div>
+
+                  <div class="calendar-days" id="calendarDays"></div>
+                </div>
+
+                <small class="text-muted">Sélectionnez une date disponible dans le calendrier.</small>
+              </div>
+
+              <div class="mb-4">
+                <label for="timeSelect" class="form-label">Heure</label>
+                <select class="form-select" id="timeSelect" required>
+                  <option value="">Choisir une heure</option>
+                  <option value="10h">10h</option>
+                  <option value="11h30">11h30</option>
+                  <option value="14h">14h</option>
+                  <option value="16h">16h</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-main btn-lg w-100">
+                Confirmer le rendez-vous
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="booking-card">
+            <h3 class="h5 fw-bold mb-3">Résumé du rendez-vous</h3>
+
+            <div class="summary-box">
+              <p><strong>Nom :</strong> <span id="summaryName">Non indiqué</span></p>
+              <p><strong>Service :</strong> <span id="summaryService">Non choisi</span></p>
+
+              <p class="mb-2"><strong>Prix final :</strong></p>
+
+              <div class="price-hair-reveal" id="priceHairReveal">
+                <div class="final-price-behind">
+                  <span id="summaryPrice">Non choisi</span>
+                </div>
+                <div class="hair-field" id="hairField"></div>
+                <div class="razor" id="razor">
+                  <i class="bi bi-scissors"></i>
+                </div>
+              </div>
+
+              <p><strong>Durée :</strong> <span id="summaryDuration">Non choisie</span></p>
+              <p><strong>Coiffeuse :</strong> <span id="summaryStylist">Non choisie</span></p>
+              <p><strong>Date :</strong> <span id="summaryDate">Non choisie</span></p>
+              <p class="mb-0"><strong>Heure :</strong> <span id="summaryTime">Non choisie</span></p>
+            </div>
+
+            <div id="confirmationMessage" class="confirmation alert alert-success mt-4">
+              Votre rendez-vous est confirmé !
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Contact</span>
+        <h2 class="fw-bold">Coordonnées de l’entreprise</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="booking-card text-center">
+            <p><i class="bi bi-geo-alt"></i> 123 rue Rideau, Ottawa, ON</p>
+            <p><i class="bi bi-telephone"></i> 613-555-0148</p>
+            <p><i class="bi bi-envelope"></i> contact@studioelegance.ca</p>
+            <p class="text-muted mb-0">Conçu par Erik Skjenna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">© 2026 Studio Élégance — Prototype haute fidélité pour SEG3525</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

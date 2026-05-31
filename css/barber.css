@@ -1,0 +1,310 @@
+:root {
+  --rose: #d71920;
+  --rose-dark: #8f0f14;
+  --rose-light: #fff1f1;
+  --beige: #eef5ff;
+  --dark: #111827;
+  --muted: #6c757d;
+  --barber-blue: #0057b8;
+  --barber-red: #d71920;
+  --barber-white: #ffffff;
+}
+
+body {
+  background-color: #f8fbff;
+}
+
+.navbar-brand {
+  color: var(--barber-red);
+}
+
+.nav-link:hover {
+  color: var(--barber-blue);
+}
+
+.barber-hero {
+  background:
+    linear-gradient(135deg, rgba(0, 87, 184, 0.12), rgba(215, 25, 32, 0.12)),
+    #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.barber-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(215, 25, 32, 0.08) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(0, 87, 184, 0.08) 25%, transparent 25%);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+.barber-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-main {
+  background-color: var(--barber-red);
+  color: white;
+  border: none;
+}
+
+.btn-main:hover {
+  background-color: var(--barber-blue);
+  color: white;
+}
+
+.btn-version {
+  background: white;
+  color: var(--barber-blue);
+  border: 2px solid var(--barber-blue);
+  font-weight: 700;
+}
+
+.btn-version:hover {
+  background: var(--barber-blue);
+  color: white;
+  border-color: var(--barber-blue);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--barber-blue);
+  border-color: var(--barber-blue);
+}
+
+.section-label {
+  color: var(--barber-blue);
+}
+
+.service-icon,
+.stylist-icon {
+  color: var(--barber-red);
+}
+
+.price {
+  color: var(--barber-blue);
+}
+
+.selected-box {
+  border: 3px solid var(--barber-blue);
+}
+
+.summary-box {
+  background-color: #f0f6ff;
+  border-left: 6px solid var(--barber-blue);
+}
+
+.price-hair-reveal {
+  border-color: rgba(0, 87, 184, 0.45);
+  background: linear-gradient(135deg, #ffffff, #eaf3ff);
+}
+
+.final-price-behind span {
+  color: var(--barber-blue);
+}
+
+.razor {
+  background: var(--barber-red);
+}
+
+.calendar-header h4 {
+  color: var(--barber-blue);
+}
+
+.calendar-nav {
+  background-color: #eaf3ff;
+  color: var(--barber-blue);
+}
+
+.calendar-nav:hover {
+  background-color: var(--barber-blue);
+  color: white;
+}
+
+.calendar-day {
+  background-color: #f4f8ff;
+}
+
+.calendar-day:hover {
+  background-color: #eaf3ff;
+  color: var(--barber-blue);
+}
+
+.calendar-day.selected {
+  background-color: var(--barber-blue);
+  color: white;
+}
+
+footer {
+  background-color: #071426;
+}
+
+.barber-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(circle at center, #ffffff 0%, #edf5ff 45%, #dcecff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: loaderFadeOut 1s ease forwards;
+  animation-delay: 2.7s;
+}
+
+.barber-loader h1 {
+  margin-top: 24px;
+  font-weight: 900;
+  color: #071426;
+  letter-spacing: 1px;
+}
+
+.barber-loader p {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.barber-pole {
+  width: 90px;
+  height: 260px;
+  border-radius: 45px;
+  border: 8px solid #071426;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.barber-pole::before {
+  content: "";
+  position: absolute;
+  inset: -120px 0;
+  background: repeating-linear-gradient(
+    135deg,
+    #d71920 0px,
+    #d71920 24px,
+    #ffffff 24px,
+    #ffffff 48px,
+    #0057b8 48px,
+    #0057b8 72px,
+    #ffffff 72px,
+    #ffffff 96px
+  );
+  animation: barberSpin 0.7s linear infinite;
+}
+
+.barber-pole::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.5),
+      transparent 30%,
+      transparent 70%,
+      rgba(0, 0, 0, 0.18)
+    );
+  pointer-events: none;
+}
+
+.barber-pole-top,
+.barber-pole-bottom {
+  width: 120px;
+  height: 26px;
+  background: #071426;
+  border-radius: 999px;
+  position: relative;
+  z-index: 2;
+}
+
+.barber-pole-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: poleEntrance 1.2s ease forwards;
+}
+
+.mini-pole {
+  width: 42px;
+  height: 110px;
+  border-radius: 24px;
+  border: 4px solid #071426;
+  overflow: hidden;
+  background: white;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.mini-pole::before {
+  content: "";
+  position: absolute;
+  inset: -70px 0;
+  background: repeating-linear-gradient(
+    135deg,
+    #d71920 0px,
+    #d71920 14px,
+    #ffffff 14px,
+    #ffffff 28px,
+    #0057b8 28px,
+    #0057b8 42px,
+    #ffffff 42px,
+    #ffffff 56px
+  );
+  animation: barberSpin 0.8s linear infinite;
+}
+
+@keyframes barberSpin {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(96px);
+  }
+}
+
+@keyframes poleEntrance {
+  0% {
+    transform: scale(0.4) rotate(-25deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.08) rotate(8deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .barber-pole {
+    width: 72px;
+    height: 210px;
+  }
+
+  .barber-loader h1 {
+    font-size: 1.5rem;
+  }
+}
